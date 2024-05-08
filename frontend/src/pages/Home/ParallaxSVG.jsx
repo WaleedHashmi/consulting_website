@@ -33,7 +33,7 @@ const ParallaxSVG = () => {
     }, [scrollY]);
 
     return (
-        <div style={{ height: '150vh', position: 'relative', zIndex: 0 }}>
+        <div style={{ height: '100vh', position: 'relative', zIndex: 0 }}>
             <div ref={svgRef} style={{ position: 'sticky', top: '50px' }}
                 dangerouslySetInnerHTML={{ __html: svgContent }} />
         </div>
