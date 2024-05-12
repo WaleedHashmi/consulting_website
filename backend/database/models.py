@@ -5,7 +5,7 @@ Base = declarative_base()
 
 
 class BlogPost(Base):
-    
+    """Tabel schema for blogs."""
 
     __tablename__ = "blog_posts"
 
