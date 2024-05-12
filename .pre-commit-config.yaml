@@ -38,7 +38,7 @@ repos:
     entry: pydocstyle
     types: [python]
     exclude: '^\S+\/tests?\/\S+'
-    args: ["--ignore=D100,D203"]
+    args: ["--ignore=D100,D203,D400,D415,D213"]
 
 #  - id: mypy
 #    name: type check
