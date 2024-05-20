@@ -2,15 +2,7 @@ import subprocess
 
 from database import Session, engine
 from database.models import Base, BlogPost
-
-
-def database_exists(database_name):
-    """Check if the database exists"""
-    command = f"psql -lqt | cut -d \\| -f 1 | grep -w {database_name}"
-    result = subprocess.run(
-        command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
-    )
-    return result.returncode == 0
+from sqlalchemy_utils import database_exists
 
 
 def create_database(database_name: str):
@@ -19,7 +11,7 @@ def create_database(database_name: str):
     TODO: This will be moved to some centralised non-local server
     at some point.
     """
-    if not database_exists(database_name):
+    if not database_exists(engine.url):
         command = f"createdb {database_name}"
 
         try:
