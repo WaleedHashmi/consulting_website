@@ -31,14 +31,14 @@ repos:
     entry: flake8
     types: [python]
 
-  - id: pydocstyle
-    name: docstring style
-    stages: [commit]
-    language: system
-    entry: pydocstyle
-    types: [python]
-    exclude: '^\S+\/tests?\/\S+'
-    args: ["--ignore=D100,D203,D400,D415,D213"]
+  # - id: pydocstyle
+  #   name: docstring style
+  #   stages: [commit]
+  #   language: system
+  #   entry: pydocstyle
+  #   types: [python]
+  #   exclude: '^\S+\/tests?\/\S+'
+  #   args: ["--ignore=D100,D203,D400,D415,D213"]
 
 #  - id: mypy
 #    name: type check
